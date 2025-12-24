@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>RoseMatch</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              rose: {
+                50: '#FAF8F6', // Off-white/Background
+                100: '#FFD1DC', // Blush Pink
+                200: '#E8B4B8', // Rose Gold Light
+                300: '#DCAE96', // Dusty Rose
+                400: '#C9A9A6', // Rose Gold Metallic
+                500: '#B76E79', // Rose Gold Primary
+                600: '#8B5F65', // Rose Gold Dark
+                700: '#6E454B',
+                800: '#523035',
+                900: '#361C20',
+              },
+              gold: {
+                100: '#FFF9E5',
+                200: '#FBF0CE',
+                300: '#F4E8C1', // Champagne Gold
+                400: '#DCC380',
+                500: '#C4A452',
+                600: '#B87333', // Copper
+              },
+              gray: {
+                50: '#F9FAFB',
+                100: '#F5F5F5', // Light Gray
+                200: '#E5E7EB',
+                300: '#CCCCCC', // Medium Gray (Borders)
+                400: '#9CA3AF',
+                500: '#6B7280',
+                600: '#666666', // Dark Gray
+                700: '#374151',
+                800: '#333333', // Charcoal
+                900: '#111827',
+              }
+            },
+            fontFamily: {
+              sans: ['DM Sans', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+            },
+            boxShadow: {
+              'rose': '0 4px 12px rgba(183, 110, 121, 0.25)',
+              'rose-lg': '0 8px 24px rgba(183, 110, 121, 0.35)',
+              'card': '0 2px 8px rgba(0,0,0,0.08)',
+              'card-hover': '0 4px 16px rgba(0,0,0,0.12)',
+            },
+            backgroundImage: {
+              'rose-gradient': 'linear-gradient(135deg, #B76E79 0%, #E8B4B8 100%)',
+              'shimmer-gradient': 'linear-gradient(135deg, #C9A9A6 0%, #F4E8C1 50%, #C9A9A6 100%)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'DM Sans', sans-serif;
+        background-color: #FAF8F6;
+        color: #333333;
+        -webkit-tap-highlight-color: transparent;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+      }
+      /* Hide scrollbar for smooth horizontal scrolling utility */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      /* Safe area adjustments */
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom);
+      }
+      .pt-safe {
+        padding-top: env(safe-area-inset-top);
+      }
+
+      /* Hide native password toggle in Edge/IE/Chrome to prevent duplicate icons */
+      input::-ms-reveal,
+      input::-ms-clear {
+        display: none;
+      }
+
+      /* Global Scrollbar Styling */
+      /* Desktop - Beautiful rose gold scrollbar */
+      @media (min-width: 768px) {
+        * {
+          scrollbar-width: thin;
+          scrollbar-color: rgba(183, 110, 121, 0.3) transparent;
+        }
+        *::-webkit-scrollbar {
+          width: 6px;
+          height: 6px;
+        }
+        *::-webkit-scrollbar-track {
+          background: transparent;
+          border-radius: 10px;
+        }
+        *::-webkit-scrollbar-thumb {
+          background: rgba(183, 110, 121, 0.3);
+          border-radius: 10px;
+          transition: background 0.3s ease;
+        }
+        *::-webkit-scrollbar-thumb:hover {
+          background: rgba(183, 110, 121, 0.5);
+        }
+      }
+
+      /* Mobile - Hide scrollbar completely for app-like feel */
+      @media (max-width: 767px) {
+        * {
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+        }
+        *::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.32.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react-dom": "https://esm.sh/react-dom@^19.2.3"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

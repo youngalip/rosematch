@@ -1,0 +1,8 @@
+{
+  "name": "RoseMatch",
+  "description": "A premium, purpose-driven social connection app focusing on shared activities and interests with a sophisticated rose-gold aesthetic.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ]
+}
